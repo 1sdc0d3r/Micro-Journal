@@ -2,9 +2,9 @@
   "name": "micro-journal",
   "version": "1.0.0",
   "description": "Journal that will track journal entries w/ does",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "knex seed:run --env testing && cross-env NODE_ENV=testing && jest --watchAll --verbose"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,27 @@
   "bugs": {
     "url": "https://github.com/1sdc0d3r/Micro-Journal/issues"
   },
-  "homepage": "https://github.com/1sdc0d3r/Micro-Journal#readme"
+  "homepage": "https://github.com/1sdc0d3r/Micro-Journal#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "helmet": "^3.21.2",
+    "jest": "^25.1.0",
+    "knex": "^0.20.10",
+    "sqlite3": "^4.1.1",
+    "supertest": "^4.0.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  }
 }
