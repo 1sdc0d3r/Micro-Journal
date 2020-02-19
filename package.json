@@ -1,0 +1,19 @@
+{
+  "name": "micro-journal",
+  "version": "1.0.0",
+  "description": "Journal that will track journal entries w/ does",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1sdc0d3r/Micro-Journal.git"
+  },
+  "author": "1sdc0d3r",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1sdc0d3r/Micro-Journal/issues"
+  },
+  "homepage": "https://github.com/1sdc0d3r/Micro-Journal#readme"
+}
