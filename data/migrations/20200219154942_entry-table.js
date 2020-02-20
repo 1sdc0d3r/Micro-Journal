@@ -5,7 +5,7 @@ exports.up = function(knex) {
       .dateTime("created_at")
       .notNullable()
       .defaultTo(knex.raw("CURRENT_TIMESTAMP"));
-    tbl.dateTime("modified_at").notNullable();
+    tbl.dateTime("modified_at");
     tbl
       .integer("journal_id")
       .notNullable()

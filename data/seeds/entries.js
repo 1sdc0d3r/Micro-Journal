@@ -1,7 +1,7 @@
 exports.seed = function(knex) {
   // Deletes ALL existing entries
   return knex("Entry")
-    .del()
+    .truncate()
     .then(function() {
       // Inserts seed entries
       return knex("Entry").insert([
@@ -19,14 +19,14 @@ exports.seed = function(knex) {
         },
         {
           journal_id: 2,
-          medication: "adderall xr",
-          dose: "20mg",
+          medication: "adderall",
+          dose: "10mg",
           entry: "entry 1"
         },
         {
           journal_id: 2,
-          medication: "adderall xr",
-          dose: "20mg",
+          medication: "adderall",
+          dose: "10mg",
           entry: "entry 2"
         }
       ]);
