@@ -4,13 +4,13 @@ exports.up = function(knex) {
     tbl
       .integer("user_id")
       .notNullable()
-      .unsigned()
-      .references("User.id");
+      .unsigned();
+    //   .references("User.id");
     tbl
       .integer("entry_id")
       .notNullable()
-      .unsigned()
-      .references("Entry.id");
+      .unsigned();
+    //   .references("Entry.id");
   });
 };
 
