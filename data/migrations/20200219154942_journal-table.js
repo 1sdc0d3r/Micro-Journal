@@ -2,11 +2,15 @@ exports.up = function(knex) {
   return knex.schema.createTable("Journal", tbl => {
     tbl.increments();
     tbl
-      .integer("journal_id")
+      .integer("user_id")
       .notNullable()
       .unsigned()
       .references("User.id");
-    tbl.integer("entry_id");
+    tbl
+      .integer("entry_id")
+      .notNullable()
+      .unsigned()
+      .references("Entry.id");
   });
 };
 

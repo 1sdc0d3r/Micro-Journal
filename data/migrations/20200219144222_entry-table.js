@@ -6,11 +6,6 @@ exports.up = function(knex) {
       .notNullable()
       .defaultTo(knex.raw("CURRENT_TIMESTAMP"));
     tbl.dateTime("modified_at");
-    tbl
-      .integer("journal_id")
-      .notNullable()
-      .unsigned()
-      .references("Journal.id");
     tbl.string("medication");
     tbl.string("dose");
     tbl.string("entry").notNullable();
